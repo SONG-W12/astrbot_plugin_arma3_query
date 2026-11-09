@@ -1,0 +1,14 @@
+# 统一换行，避免跨平台 diff 噪音
+* text=auto eol=lf
+
+*.py      text eol=lf
+*.yaml    text eol=lf
+*.yml     text eol=lf
+*.json    text eol=lf
+*.md      text eol=lf
+*.txt     text eol=lf
+
+# 打包发布时排除开发相关文件，减小 zip 体积
+.gitignore      export-ignore
+.gitattributes  export-ignore
+CHANGELOG.md    export-ignore

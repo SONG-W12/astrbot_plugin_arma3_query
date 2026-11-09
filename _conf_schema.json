@@ -1,0 +1,56 @@
+{
+  "enable_group_whitelist": {
+    "description": "是否启用群白名单",
+    "hint": "默认关闭，装好即可在任意群里使用。开启后只有「允许使用本插件的群号列表」里的群可以使用；私聊不受影响。",
+    "type": "bool",
+    "default": false
+  },
+  "allowed_groups": {
+    "description": "允许使用本插件的群号列表",
+    "hint": "填写 QQ 群号，如 [\"123456789\", \"987654321\"]。每个群有自己独立的服务器清单",
+    "type": "list",
+    "default": []
+  },
+  "owner_qq": {
+    "description": "机器人主人的 QQ 号",
+    "hint": "填了才能在群里用「添加白名单 / 删除白名单 / 白名单」，并且在私聊里查询所有群的服务器。留空表示暂不设定主人（此时没有人能授权白名单）",
+    "type": "string",
+    "default": ""
+  },
+  "welcome_enabled": {
+    "description": "是否启用入群欢迎",
+    "hint": "默认关闭。开启后新人入群会收到欢迎语并 @ 对方。每个群还可以在群里发「欢迎 开 / 欢迎 关」单独控制。",
+    "type": "bool",
+    "default": false
+  },
+  "welcome_at_newcomer": {
+    "description": "欢迎时 @ 新人",
+    "hint": "开启后欢迎语前面会 @ 一下新人，QQ 会给对方推送提醒，避免他漏看。关掉则只发纯文字。",
+    "type": "bool",
+    "default": true
+  },
+  "welcome_template": {
+    "description": "默认欢迎语（没在群里单独设置过的群使用）",
+    "hint": "可用变量：{昵称} {群名片} {QQ} {群号} {群名} {人数} {时间}。也可以在群里发「设置欢迎语 ...」给单个群单独设置，那个优先级更高。",
+    "type": "text",
+    "default": "欢迎加入本群！\n本群是 Arma3 服务器交流群，发送「服务器列表」可以查看当前在架的服务器。\n有问题随时 @管理员 ~"
+  },
+  "query_cooldown": {
+    "description": "查询冷却（秒）",
+    "hint": "普通群友两次查询之间需要间隔的秒数，填 0 表示不限制。机器人主人不受此限制。",
+    "type": "int",
+    "default": 5
+  },
+  "watchdog_enabled": {
+    "description": "启用掉线/上线播报",
+    "hint": "开启后会在后台定时检查各群录入的服务器，掉线或恢复时自动播报到「那个群」。只对你手动录入的服务器生效，只在状态变化时播报，不会刷屏。",
+    "type": "bool",
+    "default": true
+  },
+  "watchdog_interval": {
+    "description": "掉线巡检间隔（秒）",
+    "hint": "多久检查一次，默认 180 秒（3 分钟）。允许范围 60–3600。",
+    "type": "int",
+    "default": 180
+  }
+}

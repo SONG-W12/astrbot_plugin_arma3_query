@@ -1,0 +1,29 @@
+name: astrbot_plugin_arma3_query
+display_name: Arma3服务器查询
+short_desc: 查询 Arma3 服务器状态与玩家列表，支持掉线自动播报和自定义入群欢迎
+desc: |
+  Arma3 服务器查询插件：在群里发送服务器名即可查看在线状态、全部在线玩家（时长/得分）、
+  地图与版本、连接地址；一条「服务器列表」可同时看到所有服务器的在线人数。
+
+  主要特性：
+  - 玩家列表全量展示，不做截断
+  - 各群服务器清单互相独立，互不可见、互不影响
+  - 服务器掉线 / 恢复时自动播报到所属群（只在状态变化时播报，不刷屏）
+  - 可自定义入群欢迎语，支持 {昵称} {群名片} {QQ} {群号} {群名} {人数} {时间} 变量
+  - 查询失败给出中文提示，不会把报错原文甩到群里
+  - 基于 A2S 协议查询，服务器端无需装任何插件；Arma3 默认查询端口为游戏端口 + 1
+
+  安装后请先在插件配置里填写「机器人主人的 QQ 号」，并按需开启入群欢迎。
+version: 1.4.0
+author: SONG-W12
+repo: https://github.com/SONG-W12/astrbot_plugin_arma3_query
+astrbot_version: ">=4.10.0"
+support_platforms:
+  - aiocqhttp
+social_link: https://github.com/SONG-W12
+tags:
+  - arma3
+  - 游戏
+  - 服务器查询
+  - 掉线播报
+  - 入群欢迎

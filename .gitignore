@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 运行期数据（各群的服务器清单与欢迎语，属于用户私有数据，绝不能提交）
+servers.json
+servers.json.legacy
+welcome.json
+.servers-*.json
+.welcome-*.json
+data/
+config/
+
+# 本地备份与编辑器
+*.bak
+*.bak_*
+*.orig
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
