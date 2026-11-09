@@ -28,6 +28,15 @@ AstrBot 插件（标识符 `astrbot_plugin_arma3_query`）：在 QQ 群里查询
 2. 重启或重载插件（`requirements.txt` 里的依赖会自动安装）
 3. **装完第一件事**：打开「插件配置」，把 **机器人主人的 QQ 号**（`owner_qq`）填上
 
+> **不需要自己装 Python，也不需要手动 `pip install`。**
+> AstrBot 自带完整的 Python 运行时，插件依赖由 AstrBot 用它的 pip 自动安装。
+> 本插件真正需要额外装的只有 `python-a2s`（纯 Python 包，约 13 KB，无需编译）；
+> `psutil` 是 AstrBot 核心依赖，`requests` 绝大多数环境已有。
+
+> 如果你的环境**连不上 PyPI**（离线部署或网络受限），自动安装会失败，插件将无法加载。
+> 此时可以在 AstrBot 所用环境里手动安装一次：
+> `pip install python-a2s requests`（桌面版可用 `AstrBot\backend\python\python.exe -m pip install ...`）。
+
 > 没填 `owner_qq` 时，插件可以正常查询，但「添加白名单 / 删除白名单 / 白名单」这三个主人专属指令不会生效，
 > 也不会把任何陌生人误当成主人。日志里会有相应提示。
 
